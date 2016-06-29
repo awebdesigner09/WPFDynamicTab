@@ -13,8 +13,28 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
-
-
+                <ResourceDictionary>
+                <LinearGradientBrush x:Key="DarkBlueBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF055CA4" Offset="0"/>
+                    <GradientStop Color="#FF3BA4FF" Offset="1"/>
+                </LinearGradientBrush>
+                <LinearGradientBrush x:Key="RedPinkBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF1A8C" Offset="0"/>
+                    <GradientStop Color="#FFC30BE0" Offset="1"/>
+                </LinearGradientBrush>
+                <LinearGradientBrush x:Key="DarkCyanBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF218985" Offset="0"/>
+                    <GradientStop Color="#FF3CCDEE" Offset="1"/>
+                </LinearGradientBrush>
+                <LinearGradientBrush x:Key="GreenCyanBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF59D147" Offset="0"/>
+                    <GradientStop Color="#FF2EC9C9" Offset="1"/>
+                </LinearGradientBrush>
+                <LinearGradientBrush x:Key="IndigoVioletBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF51FFF" Offset="0"/>
+                    <GradientStop Color="#FF6A45CD" Offset="1"/>
+                </LinearGradientBrush>
+                </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
