@@ -149,6 +149,52 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CodeReview.html" />
+    <Content Include="email-blueprints-master\modular-template-patterns\modular-template-patterns.html" />
+    <Content Include="email-blueprints-master\responsive-templates\base_boxed_2column_query.html" />
+    <Content Include="email-blueprints-master\responsive-templates\base_boxed_3column_query.html" />
+    <Content Include="email-blueprints-master\responsive-templates\base_boxed_basic_2column_query.html" />
+    <Content Include="email-blueprints-master\responsive-templates\base_boxed_basic_body_image_query.html" />
+    <Content Include="email-blueprints-master\responsive-templates\base_boxed_basic_query.html" />
+    <Content Include="email-blueprints-master\responsive-templates\base_boxed_body_image_2column_query.html" />
+    <Content Include="email-blueprints-master\templates\2col-1-2-leftsidebar.html" />
+    <Content Include="email-blueprints-master\templates\2col-1-2-rightsidebar.html" />
+    <Content Include="email-blueprints-master\templates\2col-1-2.html" />
+    <Content Include="email-blueprints-master\templates\2col-2-1.html" />
+    <Content Include="email-blueprints-master\templates\2col-basic2column.html" />
+    <Content Include="email-blueprints-master\templates\3col-1-3-asym.html" />
+    <Content Include="email-blueprints-master\templates\3col-1-3-leftsidebar.html" />
+    <Content Include="email-blueprints-master\templates\3col-1-3-rightsidebar.html" />
+    <Content Include="email-blueprints-master\templates\3col-1-3.html" />
+    <Content Include="email-blueprints-master\templates\3col-3-1-asym.html" />
+    <Content Include="email-blueprints-master\templates\3col-3-1.html" />
+    <Content Include="email-blueprints-master\templates\3col-basic3column-asym.html" />
+    <Content Include="email-blueprints-master\templates\3col-basic3column.html" />
+    <Content Include="email-blueprints-master\templates\fancy-1-2-3.html" />
+    <Content Include="email-blueprints-master\templates\fancy-1-3-2.html" />
+    <Content Include="email-blueprints-master\templates\fancy-1-50-25-25.html" />
+    <Content Include="email-blueprints-master\templates\fancy-2-1-3-leftsidebar.html" />
+    <Content Include="email-blueprints-master\templates\fancy-2-1-3-rightsidebar.html" />
+    <Content Include="email-blueprints-master\templates\fancy-50-25-25-1.html" />
+    <Content Include="email-blueprints-master\templates\fancy-50-25-25.html" />
+    <Content Include="email-blueprints-master\templates\fancy-variablelayout.html" />
+    <Content Include="email-blueprints-master\templates\gallery-1-4-1.html" />
+    <Content Include="email-blueprints-master\templates\gallery-1-4-2.html" />
+    <Content Include="email-blueprints-master\templates\gallery-1-4.html" />
+    <Content Include="email-blueprints-master\templates\gallery-4-1.html" />
+    <Content Include="email-blueprints-master\templates\gallery-basicgallery.html" />
+    <Content Include="email-blueprints-master\templates\mobile-basicmobile.html" />
+    <Content Include="email-blueprints-master\templates\mobile-postcardmobile.html" />
+    <Content Include="email-blueprints-master\templates\simple-basic.html" />
+    <Content Include="email-blueprints-master\templates\simple-leftsidebar.html" />
+    <Content Include="email-blueprints-master\templates\simple-letterhead-centerlogo.html" />
+    <Content Include="email-blueprints-master\templates\simple-letterhead-leftlogo.html" />
+    <Content Include="email-blueprints-master\templates\simple-letterhead-rightlogo.html" />
+    <Content Include="email-blueprints-master\templates\simple-postcard.html" />
+    <Content Include="email-blueprints-master\templates\simple-rightsidebar.html" />
+    <Content Include="email-blueprints-master\templates\transactional_basic.html" />
+    <Content Include="email-blueprints-master\templates\transactional_tabular.html" />
+    <Content Include="flat-pricing-table\index.html" />
+    <Content Include="flat-pricing-table\style.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
