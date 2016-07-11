@@ -60,6 +60,13 @@
             </TabControl.Resources>
             
         </TabControl>
-        <Button x:Name="btnAddItem" HorizontalAlignment="Stretch" Height="20" Content="Add Tab" Click="btnAddItem_Click_1" Grid.Row="1"/>
+        <StackPanel  Grid.Row="1">
+        <Button x:Name="btnAddItem" HorizontalAlignment="Stretch" Height="20" Content="Add Tab" Click="btnAddItem_Click_1"/>
+        <Controls:WindowButtonCommands Panel.ZIndex="1"
+                                 HorizontalAlignment="Right"
+                                 VerticalAlignment="Top"
+                                 Height="20" />
+            <Button x:Name="btnGetPDF" HorizontalAlignment="Stretch" Content="GET PDF" Click="btnGetPDF_Click"/>
+        </StackPanel>
     </Grid>
 </Controls:MetroWindow>

@@ -12,6 +12,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
+using iTextSharp.text.pdf;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.html.simpleparser;
+using Microsoft.Win32;
+using iTextSharp.text.html;
 
 namespace WPFDynamicTab
 {
@@ -195,7 +201,67 @@ namespace WPFDynamicTab
             tabDynamic.SelectedIndex = tabDynamic.Items.Count - 1;
 
         }
+
+        private void btnGetPDF_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.ShowDialog();
+            if (dlg.FileName != null)
+            {
+                
+                MemoryStream ms = createPDF(File.ReadAllText(dlg.FileName));
+                if (ms != null)
+                {
+                    var testFile = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "test.pdf");
+                    if (File.Exists(testFile))
+                        File.Delete(testFile);
+
+                    System.IO.File.WriteAllBytes(testFile, ms.ToArray());
+                }
+            }
+        }
+
+        private MemoryStream createPDF(string html)
+        {
+            MemoryStream msOutput = new MemoryStream();
+            TextReader reader = new StringReader(html);
+
+            // step 1: creation of a document-object
+            Document document = new Document(PageSize.A4, 30, 30, 30, 30);
+            PdfWriter writer = PdfWriter.GetInstance(document, msOutput);
+
+            // step 3: we create a worker parse the document
+            HTMLWorker worker = new HTMLWorker(document);
+
+
+            StyleSheet styles = new StyleSheet();
+
+            styles.LoadTagStyle(HtmlTags.H1, HtmlTags.FONTSIZE, "16");
+            styles.LoadTagStyle(HtmlTags.H1, HtmlTags.FONTSTYLE, "italic");
+            styles.LoadTagStyle(HtmlTags.H1, HtmlTags.COLOR, "#ff0000");
+            styles.LoadTagStyle(HtmlTags.UL, HtmlTags.INDENT, "10");
+            styles.LoadTagStyle(HtmlTags.LI, HtmlTags.LEADING, "16");
+                List<IElement> objects = HTMLWorker.ParseToList(
+                  reader, styles
+                );
+
+            document.Open();
+            worker.StartDocument();
+
+            foreach (IElement element in objects)
+                {
+                    document.Add(element);
+                }
+
+            worker.EndDocument();
+            worker.Close();
+            document.Close();
+
+            return msOutput;
+        }
     }
+
+    
 
     public class CloseButtonVisibility:IValueConverter
     {

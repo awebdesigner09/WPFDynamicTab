@@ -36,6 +36,9 @@ namespace WPFDynamicTab
             }
         }
 
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hi there");
+        }
     }
 }
